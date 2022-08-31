@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #EEEEEE;
+  color: #212121;
+  font-family: Helvetica, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
   display: flex;
   flex-direction: column;
+  background-color: #FFFFFF;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.19), 0 4px 4px rgba(0,0,0,0.23);
+  border-radius: 8px;
+  min-width: 400px;
+  padding: 16px;
+}
+
+.title {
+  padding: 8px 4px;
+  border-bottom: 1px solid #9E9E9E;
+  margin-bottom: 16px;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.list > li {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.list > li:nth-child(2) {
+  background-color: #E0E0E0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list > li:hover {
+  background-color: #BDBDBD;
+}
+
+li > .text {
+  flex: 1;
+}
+
+.check {
+  outline: none;
+  border: 1px solid #9E9E9E;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.check:checked {
+  accent-color: #0277BD;
+}
+
+.check:hover {
+  accent-color: #01579B;
+}
+
+.primary-button {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: #0277BD; 
+  padding: 4px 16px;
+  font-size: 32px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  font-weight: bold;
+}
+
+.primary-button:active {
+  background-color: #01579B;
+}
+
+.form {
+  display: flex;
+}
+
+.form > input {
+  flex: 1;
+  outline: none;
+  border: 1px solid #9E9E9E;
+  padding: 8px;
+  font-size: 16px;
 }
