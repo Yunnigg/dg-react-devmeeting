@@ -48,20 +48,18 @@ const Layout = ({ children }) => (
   </div>
 );
 
-const TodoList = ({ children, addTodo, addTodoFormToggled, toggleAddTodoForm }) => {
-  return (
-    <div className="list-wrapper">
-      <ul className="list">
-        {children.length !== 0
-          ? children
-          : <li>Waiting for todos...</li>}
-      </ul>
-      {addTodoFormToggled 
-        ? <AddTodoForm addTodo={addTodo} />
-        : <button className="primary-button" onClick={toggleAddTodoForm}>+</button>}
-    </div>
-  );
-}
+const TodoList = ({ children, addTodo, addTodoFormToggled, toggleAddTodoForm }) => (
+  <div className="list-wrapper">
+    <ul className="list">
+      {children.length !== 0
+        ? children
+        : <li>Waiting for todos...</li>}
+    </ul>
+    {addTodoFormToggled 
+      ? <AddTodoForm addTodo={addTodo} />
+      : <button className="primary-button" onClick={toggleAddTodoForm}>+</button>}
+  </div>
+);
 
 const TodoItem = ({ todo, toggleTodo }) => (
   <li>
